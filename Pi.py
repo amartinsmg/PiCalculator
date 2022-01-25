@@ -1,5 +1,4 @@
 pi = 0
-
 k = 1
 
 for i in range(10000000):
@@ -10,4 +9,4 @@ for i in range(10000000):
 
     k += 2
 
-print("Pi = " + str(pi))
+print("Pi = " + format(pi, ".7f"))
