@@ -2,8 +2,8 @@
 
 int main()
 {
-  double pi = 0;
-  double k = 1;
+  double pi = 0,
+   k = 1;
   for (int i = 0; i < 1000000000; i++)
   {
     if (i % 2 == 0)

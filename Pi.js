@@ -1,4 +1,4 @@
-var pi = 0,
+let pi = 0,
   k = 1;
 
 for (let i = 0; i < 1000000000; i++) {
