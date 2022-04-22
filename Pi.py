@@ -9,4 +9,4 @@ for i in range(1000000000):
 
   k += 2
 
-print("Pi = " + format(pi, ".9f"))
+print('Pi = {:.9f}'.format(pi))
