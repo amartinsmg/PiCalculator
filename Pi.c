@@ -16,6 +16,6 @@ int main()
     }
     k += 2;
   }
-  printf("Pi = %.9f\n", pi);
+  printf("Pi = %.8f\n", pi);
   return 0;
 }

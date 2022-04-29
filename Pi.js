@@ -10,4 +10,4 @@ for (let i = 0; i < 1000000000; i++) {
   k += 2;
 }
 
-console.log(`Pi = ${pi.toFixed(9)}`);
+console.log(`Pi = ${pi.toFixed(8)}`);
