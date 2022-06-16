@@ -1,13 +1,13 @@
-PROGRAM CalculatePi;
-VAR pi, k: Real; i: LongInt;
+PROGRAM Pi;
+VAR p, k: Real; i: LongInt;
 BEGIN
-  pi := 0;
+  p := 0;
   k := 1;
   FOR i := 0 TO 999999999 DO
   BEGIN
-    IF (i MOD 2 = 0) THEN pi := pi + 4 / k
-    ELSE pi := pi - 4 / k;
+    IF (i MOD 2 = 0) THEN p := p + 4 / k
+    ELSE p := p - 4 / k;
     k := k + 2;
   END;
-  WRITELN('Pi = ', pi:1:8);
+  WRITELN('Pi = ', p:1:8);
 END.
