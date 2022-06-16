@@ -5,7 +5,7 @@ BEGIN
   k := 1;
   FOR i := 0 TO 999999999 DO
   BEGIN
-    IF (i mod 2 = 0) THEN pi := pi + 4 / k
+    IF (i MOD 2 = 0) THEN pi := pi + 4 / k
     ELSE pi := pi - 4 / k;
     k := k + 2;
   END;
