@@ -9,5 +9,5 @@ BEGIN
     ELSE pi := pi - 4 / k;
     k := k + 2;
   END;
-  WRITELN('Pi = ', pi);
+  WRITELN('Pi = ', pi:1:8);
 END.
