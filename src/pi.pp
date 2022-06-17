@@ -1,13 +1,19 @@
 PROGRAM Pi;
-VAR p, k: Real; i: LongInt;
-BEGIN
-  p := 0;
-  k := 1;
-  FOR i := 0 TO 999999999 DO
+VAR _Pi: Real;
+  FUNCTION CalculatePi(Precision: LongInt):Real;
+  VAR _Pi, k: Real; i: LongInt;
   BEGIN
-    IF (i MOD 2 = 0) THEN p := p + 4 / k
-    ELSE p := p - 4 / k;
-    k := k + 2;
+    _Pi := 0;
+    k := 1;
+    FOR i := 0 TO Precision DO
+    BEGIN
+      IF (i MOD 2 = 0) THEN _Pi := _Pi + 4 / k
+      ELSE _Pi := _Pi - 4 / k;
+      k := k + 2;
+    END;
+    CalculatePi := _Pi;
   END;
-  WRITELN('Pi = ', p:1:8);
+BEGIN
+  _Pi := CalculatePi(1000000000);
+  WRITELN('Pi = ', _Pi:1:8);
 END.
