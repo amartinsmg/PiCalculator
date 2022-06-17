@@ -6,7 +6,6 @@ def calculate_pi(precision: int):
       pi += 4 / k
     else:
       pi -= 4 / k
-
     k += 2
   return pi
 
