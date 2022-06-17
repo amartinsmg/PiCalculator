@@ -15,5 +15,5 @@ VAR _Pi: Real;
   END;
 BEGIN
   _Pi := CalculatePi(1000000000);
-  WRITELN('Pi = ', _Pi:1:8);
+  Writeln('Pi = ', _Pi:1:8);
 END.
