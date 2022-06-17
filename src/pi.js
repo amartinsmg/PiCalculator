@@ -9,5 +9,5 @@ function calculatePi(precision) {
   return pi;
 }
 
-const Pi = calculatePi(1_000_000_000);
-console.log(`Pi = ${Pi.toFixed(8)}`);
+let pi = calculatePi(1_000_000_000);
+console.log(`Pi = ${pi.toFixed(8)}`);

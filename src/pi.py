@@ -10,5 +10,5 @@ def calculate_pi(precision: int):
     k += 2
   return pi
 
-PI = calculate_pi(1_000_000_000)
-print(f'Pi = {PI:.8f}')
+pi = calculate_pi(1_000_000_000)
+print(f'Pi = {pi:.8f}')
