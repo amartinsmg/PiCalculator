@@ -1,10 +1,10 @@
 # Pi
 
-A &pi; (pi) calculator program in some different languages. It uses the the Gregory-Leibniz series to calculate the irrational number &pi;. 
+A $\pi$ (pi) calculator program in some different languages. It uses the the Gregory-Leibniz series to calculate the irrational number $\pi$.
 
-<img src="assets/gregory_leibniz_series.svg" alt="pi = 4/1 - 4/3 + 4/5 - 4/7 ..." title="Gregory-Leibniz series">
+$\pi = \frac{4}{1} - \frac{4}{3} + \frac{4}{5} - \frac{4}{7} + \frac{4}{9} - \frac{4}{11} + \frac{4}{13} ...$
 
-&pi; is a mathematical constant that is the ratio of a circle's circunference to its diameter, approximately equal to 3.14159265, and is used in many formulas in math and physics.
+$\pi$ is a mathematical constant that is the ratio of a circle's circunference to its diameter, approximately equal to 3.14159265, and is used in many formulas in math and physics.
 
 The main objective of this project is to observe the difference in syntax and runtime of each programming language.
 
