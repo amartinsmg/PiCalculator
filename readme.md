@@ -2,7 +2,7 @@
 
 A &pi; (pi) calculator program in some different languages. It uses the the Gregory-Leibniz series to calculate the irrational number &pi;. 
 
-<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e9e3959cd2d0ec735e7a6a1917df784842b76706" alt="pi = 4/1 - 4/3 + 4/5 - 4/7 ..." title="Gregory-Leibniz series">
+<img src="assets/gregory_leibniz_series.svg" alt="pi = 4/1 - 4/3 + 4/5 - 4/7 ..." title="Gregory-Leibniz series">
 
 &pi; is a mathematical constant that is the ratio of a circle's circunference to its diameter, approximately equal to 3.14159265, and is used in many formulas in math and physics.
 
