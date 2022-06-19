@@ -15,4 +15,4 @@ function calculatePI(precision)
 end
 
 _pi = calculatePI(1_000_000_000)
-@printf("Pi = %.8f", _pi)
+@printf("Pi = %.8f\n", _pi)
