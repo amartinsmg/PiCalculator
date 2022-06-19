@@ -10,7 +10,7 @@ The main objective of this project is to observe the difference in syntax and ru
 
 The measurements in the table below were performed using the `time` command in Git Bash. The items are organized by execution time.
 
-| Language | Compiler/ Interpreter | Source file source | Compile time| Built file size| Execution time |
+| Language | Compiler/ Interpreter | Source file size | Compile time| Built file size| Execution time |
 | --- | --- | --- | --- | --- | --- |
 | <a href="./src/pi.rs">Rust</a> | Rust 1.61.0 |343B| 0.830s |4.442KB| 1.332s |
 | <a href="./src/pi.c">C</a> | GNU C Compiler (MinGW) 8.1.0 | 348B | 0.298s |52.8KB| 1.414s |
