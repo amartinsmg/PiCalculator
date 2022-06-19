@@ -18,7 +18,7 @@ The measurements in the table below were performed using the `time` command in G
 | <a href="./src/pi.f90">Fortran 90</a> | GNU Fortran (MinGW) 8.1.0 | 0.321s | 1.425s |
 | <a href="./src/pi.cs">C#</a> | Microsoft Visual C# Compiler 4.8.41 | 0.366s | 1.459s |
 | <a href="./src/pi.go">Go</a> | Go 1.18.3 | 0.442s | 1.530s |
-| <a href="./src/pi.java">Java</a> | Java RE 18.0.1 | 1.390s | 1.593s |
+| <a href="./src/Pi.java">Java</a> | Java RE 18.0.1 | 1.390s | 1.593s |
 | <a href="./src/pi.kt">Kotlin</a> | Kotlin 1.5.0 (JRE 18.0.1) | 8.306s | 1.911s |
 | <a href="./src/pi.js">Javascript</a> | Node 16.14.0 | - | 2.044s |
 | <a href="./src/pi.pp">Pascal</a> | Free Pascal Compiler 3.2.2| 0.167s | 2.807s |
