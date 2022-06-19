@@ -1,6 +1,6 @@
 using Printf
 
-function calculatePI(precision)
+function calculatePi(precision)
   _pi = 0.0
   k = 1.0
   for i = 0:precision
@@ -14,5 +14,5 @@ function calculatePI(precision)
   return _pi
 end
 
-_pi = calculatePI(1_000_000_000)
+_pi = calculatePi(1_000_000_000)
 @printf("Pi = %.8f\n", _pi)
