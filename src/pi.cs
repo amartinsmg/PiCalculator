@@ -4,7 +4,7 @@ namespace Pi
 {
   class Program
   {
-    static double calculatePi(int precision)
+    static double CalculatePi(int precision)
     {
       double pi = 0,
               k = 1;
@@ -20,7 +20,7 @@ namespace Pi
     }
     static void Main(string[] args)
     {
-      double pi = calculatePi(1000000000);
+      double pi = CalculatePi(1000000000);
       Console.WriteLine("Pi = {0:0.00000000}", pi);
     }
   }
