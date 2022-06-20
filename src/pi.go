@@ -17,6 +17,6 @@ func calculatePi(precision int32) float64 {
 }
 
 func main() {
-	var pi float64 = calculatePi(1_000_000_000)
-	fmt.Printf("Pi = %.8f\n", pi)
+  var pi float64 = calculatePi(1_000_000_000)
+  fmt.Printf("Pi = %.8f\n", pi)
 }
