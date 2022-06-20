@@ -3,18 +3,17 @@ package main
 import "fmt"
 
 func calculatePi(precision int32) float64 {
-	var pi float64 = 0
-	var k float64 = 1
-	var i int32
-	for i = 0; i < precision; i++ {
-		if i%2 == 0 {
-			pi += 4 / k
-		} else {
-			pi -= 4 / k
-		}
-		k += 2
-	}
-	return pi
+  var pi, k float64 = 0, 1
+  var i int32
+  for i = 0; i < precision; i++ {
+    if i%2 == 0 {
+      pi += 4 / k
+    } else {
+      pi -= 4 / k
+    }
+    k += 2
+  }
+  return pi
 }
 
 func main() {

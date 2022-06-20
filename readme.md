@@ -17,9 +17,9 @@ The measurements in the table below were performed using the `time` command in G
 | <a href="./src/pi.cpp">C++</a> | GNU C++ Compiler (MinGW) 8.1.0 | 355B | 0.486s |82.8KB| 1.422s |
 | <a href="./src/pi.f90">Fortran 90</a> | GNU Fortran (MinGW) 8.1.0 | 475B | 0.321s | 377KB| 1.425s |
 | <a href="./src/pi.cs">C#</a> | Microsoft Visual C# Compiler 4.8.41 | 497B | 0.366s | 4KB| 1.459s |
-| <a href="./src/pi.go">Go</a> | Go 1.18.3 | 357B | 0.442s | 1.862KB| 1.530s |
+| <a href="./src/pi.go">Go</a> | Go 1.18.3 | 362B | 0.442s | 1.862KB| 1.530s |
 | <a href="./src/Pi.java">Java</a> | Java RE 18.0.1 | 415B | 1.390s |959B| 1.593s |
-| <a href="./src/pi.kt">Kotlin</a> | Kotlin 1.5.0 (JRE 18.0.1) | 331B | 8.306s | 4400KB| 1.911s |
+| <a href="./src/pi.kt">Kotlin</a> | Kotlin 1.5.0 (JRE 18.0.1) | 332B | 8.306s | 4400KB| 1.911s |
 | <a href="./src/pi.js">Javascript</a> | Node 16.14.0 | 275B | - | - | 2.044s |
 | <a href="./src/pi.pp">Pascal</a> | Free Pascal Compiler 3.2.2| 388B| 0.167s |43KB| 2.807s |
 | <a href="./src/pi.jl">Julia</a> | Julia 1.7.2 | 274B | - | - | 4.355s |

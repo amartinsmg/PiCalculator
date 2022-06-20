@@ -1,6 +1,5 @@
 fun calculatePi(precision:Int):Double {
-  var pi: Double = 0.0
-  var k: Double = 1.0
+  var (pi: Double, k: Double) = Pair(0.0, 1.0)
   for (i in 0..precision) {
     if (i % 2 == 0) {
       pi += 4 / k

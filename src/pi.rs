@@ -1,6 +1,5 @@
 fn calculate_pi(precision: i32) -> f64 {
-  let mut pi:f64 = 0.0;
-  let mut k:f64 = 1.0;
+  let (mut pi, mut k): (f64, f64) = (0.0, 1.0);
   for i in 0..precision {
     if i % 2 == 0 {
       pi = pi + 4.0 / k;
