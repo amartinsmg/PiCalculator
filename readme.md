@@ -15,7 +15,7 @@ The measurements in the table below were performed using the `time` command in G
 | <a href="./src/pi.rs">Rust</a> | Rust 1.61.0 |343B| 0.830s |4.442KB| 1.332s |
 | <a href="./src/pi.c">C</a> | GNU C Compiler (MinGW) 8.1.0 | 348B | 0.298s |52.8KB| 1.414s |
 | <a href="./src/pi.cpp">C++</a> | GNU C++ Compiler (MinGW) 8.1.0 | 355B | 0.486s |82.8KB| 1.422s |
-| <a href="./src/pi.f90">Fortran 90</a> | GNU Fortran (MinGW) 8.1.0 | 475B | 0.321s | 377KB| 1.425s |
+| <a href="./src/pi.f90">Fortran 90</a> | GNU Fortran (MinGW) 8.1.0 | 473B | 0.321s | 377KB| 1.425s |
 | <a href="./src/pi.cs">C#</a> | Microsoft Visual C# Compiler 4.8.41 | 497B | 0.366s | 4KB| 1.459s |
 | <a href="./src/pi.go">Go</a> | Go 1.18.3 | 364B | 0.442s | 1.862KB| 1.530s |
 | <a href="./src/Pi.java">Java</a> | Java RE 18.0.1 | 415B | 1.390s |959B| 1.593s |

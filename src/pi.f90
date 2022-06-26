@@ -6,7 +6,7 @@ function calculate_pi(precision)
   do i = 0, precision
     if (mod(i, 2) == 0) then
       pi_ = pi_ + 4 / k
-      else
+    else
       pi_ = pi_ - 4 / k
     end if
     k = k + 2
