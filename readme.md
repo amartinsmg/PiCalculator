@@ -15,7 +15,7 @@ The measurements in the table below were performed using the `time` command in G
 | <a href="./src/pi.c">C</a> | GNU C Compiler (MinGW) 8.1.0 | 348B | 0.298s |52.8KB| 1.286s |
 | <a href="./src/pi.f90">Fortran</a> | GNU Fortran (MinGW) 8.1.0 | 473B | 0.321s | 377KB| 1.291s |
 | <a href="./src/pi.cpp">C++</a> | GNU C++ Compiler (MinGW) 8.1.0 | 355B | 0.486s |82.8KB| 1.302s |
-| <a href="./src/pi.pp">Pascal</a> | Free Pascal Compiler 3.2.2| 388B| 0.167s |43KB| 1.318s |
+| <a href="./src/pi.pp">Pascal</a> | Free Pascal Compiler 3.2.2| 388B| 0.167s |99KB| 1.318s |
 | <a href="./src/pi.rs">Rust</a> | Rust 1.61.0 |343B| 0.830s |4.442KB| 1.332s |
 | <a href="./src/pi.vb">Visual Basic .NET</a> | Microsoft Visual Basic Compiler 14.8.4161|486B| 0.414s |6.5KB| 1.376s|
 | <a href="./src/pi.cs">C#</a> | Microsoft Visual C# Compiler 4.8.41 | 499B | 0.366s | 4KB| 1.459s |
