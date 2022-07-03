@@ -1,4 +1,4 @@
-fun calculatePi(precision:Int):Double {
+fun calculatePi(precision: Int): Double {
   var (pi: Double, k: Double) = Pair(0.0, 1.0)
   for (i in 0..precision) {
     if (i % 2 == 0) {

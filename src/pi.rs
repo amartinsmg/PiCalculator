@@ -12,6 +12,6 @@ fn calculate_pi(precision: i32) -> f64 {
 }
 
 fn main() {
-  let pi:f64 = calculate_pi(1_000_000_000);
+  let pi: f64 = calculate_pi(1_000_000_000);
   println!("Pi = {:.8}", pi)
 }

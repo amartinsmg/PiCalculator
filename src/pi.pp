@@ -1,8 +1,9 @@
 PROGRAM Pi;
 VAR _Pi: Real;
 
-FUNCTION CalculatePi(Precision: LongInt):Real;
-VAR _Pi, k: Real; i: LongInt;
+FUNCTION CalculatePi(Precision: LongInt): Real;
+VAR _Pi, k: Real;
+  i: LongInt;
 BEGIN
   _Pi := 0;
   k := 1;
