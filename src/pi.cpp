@@ -17,7 +17,7 @@ double calculatePi(int precision)
 
 int main()
 {
-  double const PI = calculatePi(1000000000);
+  double PI = calculatePi(1000000000);
   printf("Pi = %.8f\n", PI);
   return 0;
 }
