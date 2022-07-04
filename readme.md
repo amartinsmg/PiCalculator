@@ -30,4 +30,14 @@ The measurements in the table below were performed using the `time` command in G
 | <a href="./src/pi.rb">Ruby</a> | Ruby 3.1.2 |256B| - | - | 2m 42.240s |
 | <a href="./src/pi.r">R</a> | Rscript 4.2.0 | 287B| - | - | 3m 53.132s |
 
-Builds and runs were performed using a laptop with Windows 10.0.22000, Intel Core i5-8250U and 8 GB of RAM in GNU bash 4.4.23.
+<sup>Builds and runs were performed using a laptop with Windows 10.0.22000, Intel Core i5-8250U and 8 GB of RAM in GNU bash 4.4.23.<sup>
+
+All source files can be compiled using this command (Make sure you have all compilers installed):
+````
+bash compile.sh --all
+````
+
+You can use this command to help you to compile single source files:
+````
+bash compile.sh
+````
