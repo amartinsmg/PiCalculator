@@ -34,10 +34,10 @@ The measurements in the table below were performed using the `time` command in G
 
 All source files can be compiled using this command (Make sure you have all compilers installed):
 ````
-bash compile.sh --all
+make
 ````
 
-You can use this command to help you to compile single source files:
+If you want to compile single source files, you can add the file extension after the `make` command, e.g., to compile just the version written in C, use this command:
 ````
-bash compile.sh
+make c
 ````
