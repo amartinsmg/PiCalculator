@@ -46,9 +46,7 @@ kt () {
 pp () {
   fpc -Px86_64 -O2 -FE"build" -o"pi_pp" src/pi.pp
   [ $? == 0 ] && echo "Pascal compilled successfully"
-  cd build
-  rm *.o
-  cd ..
+  rm build/*.o
 }
 
 rs () {
@@ -94,18 +92,20 @@ case $1 in
     rs
     vb;;
   *)
+    echo "Usage: bash compile.sh [option]" 
+    echo " "
     echo "Options:"
     echo " "
-    echo "  --c     Compile C"
-    echo "  --cpp   Compile C++"
-    echo "  --cs    Compile C-sharp"
-    echo "  --f90   Compile Fortran"
-    echo "  --go    Compile Go"
-    echo "  --java  Compile Java"
-    echo "  --kt    Compile Kotlin"
-    echo "  --pp    Compile Pascal"
-    echo "  --rs    Compile Rust"
-    echo "  --vb    Compile Visual Basic"
-    echo "  --all   Compile all languages"
+    echo "  --c     compile C"
+    echo "  --cpp   compile C++"
+    echo "  --cs    compile C-sharp"
+    echo "  --f90   compile Fortran"
+    echo "  --go    compile Go"
+    echo "  --java  compile Java"
+    echo "  --kt    compile Kotlin"
+    echo "  --pp    compile Pascal"
+    echo "  --rs    compile Rust"
+    echo "  --vb    compile Visual Basic"
+    echo "  --all   compile all languages"
 esac
 
