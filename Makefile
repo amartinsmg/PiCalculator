@@ -20,7 +20,7 @@ class:
 	javac -d build src/Pi.java
 
 java: class
-	jar -cfe build/pi_java.jar Pi -C build . &&	rm build/*.class
+	jar -cfe build/pi_java.jar Pi -C build . && rm build/*.class
 
 kt:
 	kotlinc src/pi.kt -include-runtime -d build/pi_kt.jar
