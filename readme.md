@@ -28,7 +28,7 @@ The measurements in the table below were performed using the `time` command in G
 | <a href="./src/pi.php">PHP</a> | Zend Engine 4.1.7 | 304B | - | 49.859s |
 | <a href="./src/pi.py">Python</a> | CPython 3.10.5 |246B | - | 2m 22.004s |
 | <a href="./src/pi.rb">Ruby</a> | Ruby 3.1.2 |263B| - | 2m 47.911s |
-| <a href="./src/pi.pl">Perl</a> | Perl 5.34.0 | 314B| - | 3m 11.162s |
+| <a href="./src/pi.pl">Perl</a> | Perl 5.34.0 | 304B| - | 3m 11.162s |
 | <a href="./src/pi.r">R</a> | Rscript 4.2.0 | 297B| - | 3m 51.407s |
 
 <sup>Builds and runs were performed using a laptop with Windows 10.0.22000, Intel Core i5-8250U and 8 GB of RAM in GNU bash 4.4.23.<sup>
