@@ -1,11 +1,14 @@
 package main
 
-import "fmt"
+import (
+  "fmt"
+  "math"
+)
 
 func calculatePi(precision int32) float64 {
   var pi, k float64 = 0, 1
-  var i int32
-  for i = 0; i < precision; i++ {
+  var max, i int32 = int32(math.Pow(10, float64(precision))), 0
+  for ; i < max; i++ {
     if i%2 == 0 {
       pi += 4 / k
     } else {
@@ -17,6 +20,6 @@ func calculatePi(precision int32) float64 {
 }
 
 func main() {
-  var pi float64 = calculatePi(1_000_000_000)
+  var pi float64 = calculatePi(9)
   fmt.Printf("Pi = %.8f\n", pi)
 }

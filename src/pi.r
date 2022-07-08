@@ -1,7 +1,8 @@
 calculate_pi <- function(precision) {
   .pi <- 0
   k <- 1
-  for (i in 0:precision) {
+  max <- 10 ^ precision
+  for (i in 0:max) {
     if (i %% 2 == 0) {
       .pi <- .pi + 4 / k
     } else {
@@ -12,5 +13,5 @@ calculate_pi <- function(precision) {
   return(.pi)
 }
 
-.pi <- calculate_pi(1000000000)
+.pi <- calculate_pi(9)
 sprintf("Pi = %.8f", .pi)

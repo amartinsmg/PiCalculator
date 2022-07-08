@@ -1,6 +1,7 @@
 fn calculate_pi(precision: i32) -> f64 {
   let (mut pi, mut k): (f64, f64) = (0.0, 1.0);
-  for i in 0..precision {
+  let max: i32 = i32::pow(10, precision as u32);
+  for i in 0..max {
     if i % 2 == 0 {
       pi = pi + 4.0 / k;
     } else {
@@ -12,6 +13,6 @@ fn calculate_pi(precision: i32) -> f64 {
 }
 
 fn main() {
-  let pi: f64 = calculate_pi(1_000_000_000);
+  let pi: f64 = calculate_pi(9);
   println!("Pi = {:.8}", pi)
 }

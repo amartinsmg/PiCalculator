@@ -1,10 +1,12 @@
 #include <stdio.h>
+#include <math.h>
 
 double calculatePi(int precision)
 {
   double pi = 0,
          k = 1;
-  for (int i = 0; i < precision; i++)
+  int max = pow(10, precision);
+  for (int i = 0; i < max; i++)
   {
     if (i % 2 == 0)
       pi += 4 / k;
@@ -17,7 +19,7 @@ double calculatePi(int precision)
 
 int main()
 {
-  double pi = calculatePi(1000000000);
+  double pi = calculatePi(9);
   printf("Pi = %.8f\n", pi);
   return 0;
 }

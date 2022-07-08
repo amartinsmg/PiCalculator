@@ -8,7 +8,8 @@ namespace Pi
     {
       double pi = 0,
               k = 1;
-      for (int i = 0; i < precision; i++)
+      int max = (int) Math.Pow(10, precision);
+      for (int i = 0; i < max; i++)
       {
         if (i % 2 == 0)
           pi += 4 / k;
@@ -20,7 +21,7 @@ namespace Pi
     }
     static void Main(string[] args)
     {
-      double pi = CalculatePi(1000000000);
+      double pi = CalculatePi(9);
       Console.WriteLine("Pi = {0:0.00000000}", pi);
     }
   }

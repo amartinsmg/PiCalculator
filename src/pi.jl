@@ -3,7 +3,8 @@ using Printf
 function calculatePi(precision)
   _pi = 0.0
   k = 1.0
-  for i = 0:precision
+  max = 10 ^ precision
+  for i = 0:max
     if iseven(i)
       _pi += 4/ k
     else
@@ -14,5 +15,5 @@ function calculatePi(precision)
   return _pi
 end
 
-_pi = calculatePi(1_000_000_000)
+_pi = calculatePi(9)
 @printf("Pi = %.8f\n", _pi)
