@@ -15,10 +15,10 @@ The measurements in the table below were performed using the `time` command in G
 | <a href="./src/pi.c">C</a> | GNU C Compiler (MinGW) 8.1.0 | 385B |57.1KB| 1.234s |
 | <a href="./src/pi.cpp">C++</a> | GNU C++ Compiler (MinGW) 8.1.0 | 385B |86.4KB| 1.235s |
 | <a href="./src/pi.f90">Fortran</a> | GNU Fortran (MinGW) 8.1.0 | 488B | 377KB| 1.244s |
-| <a href="./src/pi.go">Go</a> | Go 1.18.3 | 409B | 1.872KB| 1.286s |
+| <a href="./src/pi.go">Go</a> | Go 1.18.3 | 418B | 1.874KB| 1.286s |
 | <a href="./src/pi.pp">Pascal</a> | Free Pascal Compiler 3.2.2| 435B| 207KB| 1.319s |
 | <a href="./src/pi.rs">Rust</a> | Rust 1.61.0 |378B| 4.442KB| 1.327s |
-| <a href="./src/pi.vb">Visual Basic .NET</a> | Microsoft Visual Basic Compiler 14.8.4161|504B| 7KB| 1.448s|
+| <a href="./src/pi.vb">Visual Basic .NET</a> | Microsoft Visual Basic Compiler 14.8.4161|512B| 7KB| 1.448s|
 | <a href="./src/pi.cs">C#</a> | Microsoft Visual C# Compiler 4.8.41 | 532B | 4KB| 1.562s |
 | <a href="./src/Pi.java">Java</a> | Java RE 18.0.1 | 443B | 1KB | 1.565s |
 | <a href="./src/pi.kt">Kotlin</a> | Kotlin 1.5.0 (JRE 18.0.1) | 381B | 4400KB| 1.608s |

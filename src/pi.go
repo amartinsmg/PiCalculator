@@ -7,8 +7,9 @@ import (
 
 func calculatePi(precision int32) float64 {
   var pi, k float64 = 0, 1
-  var max, i int32 = int32(math.Pow(10, float64(precision))), 0
-  for ; i < max; i++ {
+  var max, i int32
+  max = int32(math.Pow(10, float64(precision)))
+  for i = 0; i < max; i++ {
     if i%2 == 0 {
       pi += 4 / k
     } else {
