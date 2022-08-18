@@ -1,5 +1,4 @@
 all: c cpp cs f90 go java kt pp rs vb
-	echo Compiled successfully
 
 dir:
 	[ -d build ] || mkdir build
