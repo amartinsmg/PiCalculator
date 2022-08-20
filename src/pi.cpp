@@ -19,7 +19,7 @@ double calculatePi(int precision)
 
 int main()
 {
-  double PI = calculatePi(9);
-  printf("Pi = %.8f\n", PI);
+  double pi = calculatePi(9);
+  printf("Pi = %.8f\n", pi);
   return 0;
 }
