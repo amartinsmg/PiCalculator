@@ -1,5 +1,3 @@
-DotNetPath=C:/Windows/Microsoft.NET/Framework/v4.0.30319/
-
 all: c cpp cs f90 go java kt pp rs vb
 
 dir:
@@ -12,7 +10,7 @@ cpp: dir
 	g++ -O1 -o build/pi_cpp src/pi.cpp
 
 cs: dir
-	$(DotNetPath)csc /out:build/pi_cs "src\\pi.cs"
+	csc /out:build/pi_cs "src\\pi.cs"
 
 f90: dir
 	gfortran -O1 -o build/pi_f90 src/pi.f90
@@ -36,4 +34,4 @@ rs: dir
 	rustc -o build/pi_rs -O src/pi.rs
   
 vb: dir
-	$(DotNetPath)vbc /out:build/pi_vb "src\\pi.vb"
+	vbc /out:build/pi_vb "src\\pi.vb"
