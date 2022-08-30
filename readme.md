@@ -22,14 +22,15 @@ The measurements in the table below were performed using the `time` command in G
 | [C#](./src/pi.cs)                | Microsoft Visual C# Compiler 4.8.41       | 532B             | 4KB             | 1.562s          |
 | [Java](./src/Pi.java)            | Java RE 18.0.1                            | 443B             | 1KB             | 1.565s          |
 | [Kotlin](./src/pi.kt)            | Kotlin 1.5.0 (JRE 18.0.1)                 | 381B             | 4400KB          | 1.608s          |
-| [Julia](./src/pi.jl)             | Julia 1.7.2                               | 280B             | -               | 1.792s          |
+| [Julia](./src/pi.jl)             | Julia 1.7.2                               | 281B             | -               | 1.792s          |
 | [Javascript](./src/pi.js)        | Node 16.14.0                              | 285B             | -               | 2.218s          |
 | [Dart](./src/pi.dart)            | Dart SDK 2.18.0                           | 363B             | -               | 5.553s          |
 | [PHP](./src/pi.php)              | Zend Engine 4.1.7                         | 304B             | -               | 49.859s         |
 | [Python](./src/pi.py)            | CPython 3.10.5                            | 246B             | -               | 2m 22.004s      |
-| [Ruby](./src/pi.rb)              | Ruby 3.1.2                                | 263B             | -               | 2m 47.911s      |
+| [Ruby](./src/pi.rb)              | Ruby 3.1.2                                | 266B             | -               | 2m 29.382s      |
 | [Perl](./src/pi.pl)              | Perl 5.34.0                               | 304B             | -               | 3m 11.162s      |
 | [R](./src/pi.r)                  | Rscript 4.2.0                             | 297B             | -               | 3m 51.407s      |
+| [Octave](./src/pi.m)             | GNU Octave 7.2.0                          | 267B             | -               | 99m 7.085s      |
 
 <sup>Builds and runs were performed using a laptop with Windows 10.0.22000, Intel Core i5-8250U and 8 GB of RAM in GNU bash 4.4.23.<sup>
 
