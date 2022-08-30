@@ -5,7 +5,7 @@ function calculatePi(precision)
   k = 1.0
   max = 10 ^ precision
   for i = 0:max
-    if iseven(i)
+    if i % 2 == 0
       _pi += 4/ k
     else
       _pi -= 4/ k
