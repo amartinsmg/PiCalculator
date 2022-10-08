@@ -34,7 +34,7 @@ The measurements in the table below were performed using the `time` command in G
 
 <sup>Builds and runs were performed using a laptop with Windows 10.0.22000, Intel Core i5-8250U and 8 GB of RAM in GNU bash 4.4.23.<sup>
 
-All source files can be compiled using this command:
+All compilable source files can be compiled using this command:
 
 ```
 make
