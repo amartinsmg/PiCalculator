@@ -1,14 +1,14 @@
-# Pi
+# Pi Calculator
 
-It's a personal project for a &pi; (pi) calculator program in some different languages. It uses the the Gregory-Leibniz series to calculate the irrational number &pi;.
+This is a personal project that implements a program to calculate &pi; (pi) in various programming languages using the Gregory-Leibniz series. The main objective of this project is to compare the syntax and runtime of each programming language.
 
-$\pi = \frac{4}{1} - \frac{4}{3} + \frac{4}{5} - \frac{4}{7} + \frac{4}{9} - \frac{4}{11} + \frac{4}{13} ...$
+π is a mathematical constant that represents the ratio of a circle's circumference to its diameter and is approximately equal to 3.14159265. It is used in many mathematical and physical formulas.
 
-&pi; is a mathematical constant that is the ratio of a circle's circunference to its diameter, approximately equal to 3.14159265, and is used in many formulas in math and physics.
+In each programming language, the calculatePi function approximates the value of π with a certain number of decimal places of precision. It adds or subtracts iteratively 4 divided by an odd number to an accumulator variable, alternating signs in each iteration. The number of iterations is determined by raising 10 to the power of the precision parameter. This algorithm can be mathematically represented by the formula:
 
-The main objective of this project is to observe the difference in syntax and runtime of each programming language.
+$$\pi = \frac{4}{1} - \frac{4}{3} + \frac{4}{5} - \frac{4}{7} + \frac{4}{9} - \frac{4}{11} + \frac{4}{13} ...$$
 
-The measurements in the table below were performed using the `time` command in Git Bash. The items are organized by execution time.
+The runtime of the program was measured in each programming language using the `time` command in Git Bash. The results are shown in the table below, sorted by execution time.
 
 | Language                         | Compiler/ Interpreter                     | Source file size | Built file size | Average Runtime |
 | -------------------------------- | ----------------------------------------- | ---------------- | --------------- | --------------- |
@@ -34,16 +34,10 @@ The measurements in the table below were performed using the `time` command in G
 
 <sup>Builds and runs were performed using a laptop with Windows 10.0.22000, Intel Core i5-8250U and 8 GB of RAM in GNU bash 4.4.23.<sup>
 
-All compilable source files can be compiled using this command:
+## Getting Started
 
-```
-make
-```
+The Makefile provides an easy way to compile all source files to binary format using the respective compilers.
 
-<sub>**Note**: before compiling, make sure you have all compilers installed.</sub>
+To compile all source files at once, simply clone this repository and run the command `make`. However, before compiling, ensure that you have all compilers installed.
 
-If you want to compile single source files, you can add the file extension after the `make` command, e.g., to compile just the version written in C, use this command:
-
-```
-make c
-```
+If you want to compile only a specific source file, you can add the file extension after the `make` command. For instance, to compile only the C version, use the command `make c`.
