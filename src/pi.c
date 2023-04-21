@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <math.h>
 
+/**
+  Calculates an approximation of the mathematical constant Pi using the Leibniz formula.
+    @param precision The number of decimal places of precision to be used in the approximation.
+    @return The calculated approximation of Pi.
+*/
+
 double calculatePi(int precision)
 {
   double pi = 0,
