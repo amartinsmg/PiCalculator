@@ -1,5 +1,4 @@
 # This Makefile compiles the pi.c, pi.cpp, pi.cs, pi.f90, pi.go, Pi.java, pi.kt, pi.pp, pi.rs, and pi.vb files, generating the respective executables or jars.
-# The -O1 flag is used for optimization in C, C++, Fortran and Rust.
 
 # Targets
 # `all`: compiles all files.
