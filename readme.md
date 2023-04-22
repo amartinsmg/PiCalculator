@@ -4,11 +4,15 @@ This is a personal project that implements a program to calculate &pi; (pi) in v
 
 π is a mathematical constant that represents the ratio of a circle's circumference to its diameter and is approximately equal to 3.14159265. It is used in many mathematical and physical formulas.
 
+## How it works
+
 In each programming language, the calculatePi() function approximates the value of &pi; with a certain number of decimal places of precision. It adds or subtracts iteratively 4 divided by an odd number to an accumulator variable, alternating signs in each iteration. The number of iterations is determined by raising 10 to the power of the precision parameter. This algorithm can be mathematically represented by the formula:
 
 $$\pi = \frac{4}{1} - \frac{4}{3} + \frac{4}{5} - \frac{4}{7} + \frac{4}{9} - \frac{4}{11} + \frac{4}{13} ...$$
 
-The main() function is the entry function of the program in each programming language, which calls the calculatePi() function with the argument 9 for 9 decimal places of precision, and displays the result on the screen in the format "Pi = 3.14159265".
+The main() function is the entry function of the program, which calls the calculatePi() function with the argument 9 for 9 decimal places of precision, and displays the result on the screen in the format "Pi = 3.14159265".
+
+## Runtime
 
 The runtime of the program was measured in each programming language using the `time` command in Git Bash. The results are shown in the table below, sorted by execution time.
 
@@ -38,8 +42,16 @@ The runtime of the program was measured in each programming language using the `
 
 ## Getting Started
 
-The Makefile provides an easy way to compile all source files to binary format using the respective compilers.
+The [Makefile](./Makefile) provides an easy way to compile all source files to binary format using the respective compilers.
 
 To compile all source files at once, simply clone this repository and run the command `make`. However, before compiling, ensure that you have all compilers installed.
 
 If you want to compile only a specific source file, you can add the file extension after the `make` command. For instance, to compile only the C version, use the command `make c`.
+
+## Contributing
+
+Contributions to the Pi Calculator project are welcome. If you find a bug or have a suggestion for an improvement, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
