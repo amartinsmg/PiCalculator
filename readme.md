@@ -6,11 +6,11 @@ This is a personal project that implements a program to calculate &pi; (pi) in v
 
 ## How it works
 
-In each programming language, the calculatePi() function approximates the value of &pi; with a certain number of decimal places of precision. It adds or subtracts iteratively 4 divided by an odd number to an accumulator variable, alternating signs in each iteration. The number of iterations is determined by raising 10 to the power of the precision parameter. This algorithm can be mathematically represented by the formula:
+In each programming language, the `calculatePi` function approximates the value of &pi; with a certain number of decimal places of precision. It adds or subtracts iteratively 4 divided by an odd number to an accumulator variable, alternating signs in each iteration. The number of iterations is determined by raising 10 to the power of the precision parameter. This algorithm can be mathematically represented by the formula:
 
-$$\pi = \frac{4}{1} - \frac{4}{3} + \frac{4}{5} - \frac{4}{7} + \frac{4}{9} - \frac{4}{11} + \frac{4}{13} ...$$
+$$ \pi = \sum_{n=0}^{\infty} \frac{4(-1)^n}{2n + 1} $$
 
-The main() function is the entry function of the program, which calls the calculatePi() function with the argument 9 for 9 decimal places of precision, and displays the result on the screen in the format "Pi = 3.14159265".
+The `main` function is the entry function of the program, which calls the `calculatePi` function with the argument 9 for 9 decimal places of precision, and displays the result on the screen in the format "Pi = 3.14159265".
 
 ## Runtime
 
@@ -42,11 +42,32 @@ The runtime of the program was measured in each programming language using the `
 
 ## Getting Started
 
-The [Makefile](./Makefile) provides an easy way to compile all source files to binary format using the respective compilers.
+The [Makefile](./Makefile) provides an easy way to compile all source files to binary format using the respective compilers. However, before compiling, ensure that you have all compilers installed.
 
-To compile all source files at once, simply clone this repository and run the command `make`. However, before compiling, ensure that you have all compilers installed.
+To compile all source files at once, simply clone this repository and run the this command:
 
-If you want to compile only a specific source file, you can add the file extension after the `make` command. For instance, to compile only the C version, use the command `make c`.
+```sh
+make
+```
+If you want to compile only a specific source file, you can add the file extension after the `make` command:
+
+```sh
+# Targets
+# `c`: compiles pi.c using GCC.
+# `cpp`: compiles pi.cpp using G++.
+# `cs`: compiles pi.cs using the C# compiler.
+# `f90`: compiles pi.f90 using gfortran.
+# `go`: compiles pi.go using Go compiler.
+# `class`: compiles Pi.java to .class files.
+# `java`: uses the the .class files to generates the pi_java.jar file using jar.
+# `kt`: compiles pi.kt and generates the pi_kt.jar file using Kotlin compiler.
+# `pp`: compiles pi.pp using the Free Pascal Compiler.
+# `rs`: compiles pi.rs using Rust compiler.
+# `vb`: compiles pi.vb using the VB compiler.
+
+# Example:
+make c
+```
 
 ## Contributing
 
