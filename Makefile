@@ -1,22 +1,3 @@
-# This Makefile compiles the pi.c, pi.cpp, pi.cs, pi.f90, pi.go, Pi.java, pi.kt, pi.pp, pi.rs, and pi.vb files, generating the respective executables or jars.
-
-# Targets
-# `all`: compiles all files.
-# `dir`: creates the build directory if it doesn't exist.
-# `c`: compiles pi.c using GCC.
-# `cpp`: compiles pi.cpp using G++.
-# `cs`: compiles pi.cs using the C# compiler.
-# `f90`: compiles pi.f90 using gfortran.
-# `go`: compiles pi.go using Go compiler.
-# `class`: compiles Pi.java to .class files.
-# `java`: uses the the .class files to generates the pi_java.jar file using jar.
-# `kt`: compiles pi.kt and generates the pi_kt.jar file using Kotlin compiler.
-# `pp`: compiles pi.pp using the Free Pascal Compiler.
-# `rs`: compiles pi.rs using Rust compiler.
-# `vb`: compiles pi.vb using the VB compiler.
-
-
-
 all: c cpp cs f90 go java kt pp rs vb
 
 dir:
