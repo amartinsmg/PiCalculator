@@ -1,22 +1,63 @@
-# Pi Calculator
+# PiCalculator
 
-This is a personal project that implements a program to calculate &pi; (pi) in various programming languages using the Gregory-Leibniz series. The main objective of this project is to compare the syntax and runtime of each programming language.
+PiCalculator is an exploratory multi-language project that implements the Gregory–Leibniz series to approximate π (pi) across multiple programming languages.
 
-π is a mathematical constant that represents the ratio of a circle's circumference to its diameter and is approximately equal to 3.14159265. It is used in many mathematical and physical formulas.
+The main objective is to compare:
 
-## How it works
+- Syntax and language expressiveness
+- Runtime behavior (CPU-bound workload)
+- Compiler vs interpreter performance
+- Binary size differences
+- Toolchain characteristics across ecosystems
 
-In each programming language, the `calculatePi` function approximates the value of &pi; with a certain number of decimal places of precision. It adds or subtracts iteratively 4 divided by an odd number to an accumulator variable, alternating signs in each iteration. The number of iterations is determined by raising 10 to the power of the precision parameter. This algorithm can be mathematically represented by the formula:
+This project is not intended to provide a rigorous benchmark, but rather a controlled computational experiment under similar conditions.
 
-$$ \pi = \sum_{n=0}^{\infty} \frac{4(-1)^n}{2n + 1} $$
+---
 
-The `main` function is the entry function of the program, which calls the `calculatePi` function with the argument 9 for 9 decimal places of precision, and displays the result on the screen in the format "Pi = 3.14159265".
+## Algorithm
 
-## Runtime
+All implementations approximate π using the Gregory–Leibniz infinite series:
 
-The runtime of the program was measured in each programming language using the `time` command in Git Bash. The results are shown in the table below, sorted by execution time.
+$$
+\pi = \sum_{n=0}^{\infty} \frac{4(-1)^n}{2n + 1}
+$$
 
-| Language                         | Compiler/ Interpreter                     | Source file size | Built file size | Average Runtime |
+Each program:
+
+1. Iterates `10^precision` times.
+2. Alternates between addition and subtraction.
+3. Divides 4 by successive odd numbers.
+4. Accumulates the result in a floating-point variable.
+
+Example (conceptually):
+
+```text
+π ≈ 4/1 − 4/3 + 4/5 − 4/7 + ...
+```
+
+The `main` function typically calls:
+
+```text
+calculatePi(9)
+```
+
+resulting in 1,000,000,000 iterations.
+
+This creates a CPU-intensive workload suitable for observing runtime differences across languages.
+
+---
+
+## Runtime Results
+
+Measurements were taken using the time command in Git Bash on:
+
+- Windows 10 (10.0.22000)
+- Intel Core i5-8250U
+- 8GB RAM
+
+Results sorted by average runtime:
+
+| Language                         | Compiler/ Runtime                         | Source file size | Built file size | Average Runtime |
 | -------------------------------- | ----------------------------------------- | ---------------- | --------------- | --------------- |
 | [C](./src/pi.c)                  | GNU C Compiler (MinGW) 8.1.0              | 385B             | 57.1KB          | 1.234s          |
 | [C++](./src/pi.cpp)              | GNU C++ Compiler (MinGW) 8.1.0            | 385B             | 86.4KB          | 1.235s          |
@@ -38,41 +79,80 @@ The runtime of the program was measured in each programming language using the `
 | [R](./src/pi.r)                  | Rscript 4.2.0                             | 297B             | -               | 3m 51.407s      |
 | [Octave](./src/pi.m)             | GNU Octave 7.2.0                          | 267B             | -               | 99m 7.085s      |
 
-<sup>Builds and runs were performed using a laptop with Windows 10.0.22000, Intel Core i5-8250U and 8 GB of RAM in GNU bash 4.4.23.<sup>
+---
 
-## Getting Started
+## Optimization Notes
 
-The [Makefile](./Makefile) provides an easy way to compile all source files to binary format using the respective compilers. However, before compiling, ensure that you have all compilers installed.
+Compiler optimizations were enabled whenever applicable. Native compiled languages were built with optimization flags (C, C++, and Fortran with `-O1`; Pascal with `-O2`; Rust with `-O` release optimization), while Go was compiled using its default optimized build settings. JVM and .NET implementations rely primarily on JIT and runtime optimizations rather than static compiler flags.
 
-To compile all source files at once, simply clone this repository and run the this command:
+Optimization levels were not strictly standardized across all toolchains, as each ecosystem follows distinct compilation models — including ahead-of-time (AOT), just-in-time (JIT), and interpreted execution. Because of these structural differences, achieving strict equivalence in optimization settings across languages is not always feasible.
+
+The objective of this project was practical comparability under similar conditions, rather than academically rigorous or fully controlled benchmarking.
+
+---
+
+## Observations
+
+- Compiled languages cluster around ~1.2–1.6 seconds.
+- JIT-based runtimes perform competitively.
+- Interpreted languages show significant slowdown under large iteration counts.
+- Binary size varies drastically across ecosystems (from KB to several MB).
+
+This highlights differences in:
+
+- Optimization strategies
+- Runtime overhead
+- Floating-point handling
+- Compilation model (AOT vs JIT vs interpreted)
+
+---
+
+## Build System
+
+Compilation is handled via a centralized `Makefile`.
+
+To compile all implementations:
 
 ```sh
 make
 ```
-If you want to compile only a specific source file, you can add the file extension after the `make` command:
+
+To compile a specific language:
 
 ```sh
-# Targets
-# `c`: compiles pi.c using GCC.
-# `cpp`: compiles pi.cpp using G++.
-# `cs`: compiles pi.cs using the C# compiler.
-# `f90`: compiles pi.f90 using gfortran.
-# `go`: compiles pi.go using Go compiler.
-# `class`: compiles Pi.java to .class files.
-# `java`: uses the the .class files to generates the pi_java.jar file using jar.
-# `kt`: compiles pi.kt and generates the pi_kt.jar file using Kotlin compiler.
-# `pp`: compiles pi.pp using the Free Pascal Compiler.
-# `rs`: compiles pi.rs using Rust compiler.
-# `vb`: compiles pi.vb using the VB compiler.
-
-# Example:
 make c
+make cpp
+make go
+make rs
+make java
+make cs
 ```
 
-## Contributing
+The Makefile maps each target to its respective compiler or runtime toolchain.
 
-Contributions to the Pi Calculator project are welcome. If you find a bug or have a suggestion for an improvement, please open an issue or submit a pull request.
+Ensure all compilers/interpreters are installed before running the build.
 
-## License
+---
 
-This project is licensed under the [MIT License](./LICENSE).
+## Limitations
+
+- Optimization was enabled where applicable, but not strictly standardized across toolchains.
+- No warm-up iterations for JIT runtimes.
+- No CPU affinity control.
+- No statistical averaging beyond basic timing.
+- Floating-point precision differences were not deeply analyzed.
+
+Results reflect a simplified single-threaded execution model.
+
+---
+
+## Purpose
+
+This repository serves as a computational playground to explore:
+
+- Cross-language implementation consistency
+- CPU-bound performance differences
+- Toolchain behavior
+- Binary output characteristics
+
+It serves as a personal laboratory focused purely on arithmetic workload, rather than a definitive performance benchmark.
