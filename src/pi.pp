@@ -11,8 +11,10 @@ BEGIN
   Max := Trunc(Power(10, Precision));
   FOR i := 0 TO Max DO
   BEGIN
-    IF (i MOD 2 = 0) THEN s := s + 4 / k
-    ELSE s := s - 4 / k;
+    IF (i MOD 2 = 0) THEN
+      s := s + 4 / k
+    ELSE
+      s := s - 4 / k;
     k := k + 2;
   END;
   CalculatePi := s;
