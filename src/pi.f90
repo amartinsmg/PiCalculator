@@ -1,7 +1,7 @@
 program Pi
-  real(8) :: pi_val
-  pi_val = calculate_pi(9)
-  print "(A, F10.8)", "Pi = ", pi_val
+  real(8) :: val_pi
+  val_pi = calculate_pi(9)
+  print "(A, F10.8)", "Pi = ", val_pi
 
 contains
   function calculate_pi(precision)
