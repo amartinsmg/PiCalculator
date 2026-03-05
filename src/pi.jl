@@ -1,19 +1,19 @@
 using Printf
 
 function calculatePi(precision)
-  _pi = 0.0
+  s = 0.0
   k = 1.0
-  max = 10 ^ precision
-  for i = 0:max
+  max = 10^precision
+  for i = 0:(max-1)
     if i % 2 == 0
-      _pi += 4/ k
+      s += 4 / k
     else
-      _pi -= 4/ k
+      s -= 4 / k
     end
     k += 2
   end
-  return _pi
+  return s
 end
 
-_pi = calculatePi(9)
-@printf("Pi = %.8f\n", _pi)
+val_pi = calculatePi(9)
+@printf("Pi = %.8f\n", val_pi)
