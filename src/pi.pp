@@ -9,7 +9,7 @@ BEGIN
   s := 0;
   k := 1;
   Max := Trunc(Power(10, Precision));
-  FOR i := 0 TO Max DO
+  FOR i := 0 TO Max - 1 DO
   BEGIN
     IF (i MOD 2 = 0) THEN
       s := s + 4 / k
