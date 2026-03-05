@@ -1,15 +1,15 @@
 fun calculatePi(precision: Int): Double {
-  var (pi: Double, k: Double) = Pair(0.0, 1.0)
+  var (s: Double, k: Double) = Pair(0.0, 1.0)
   var max: Int = Math.pow(10.0, precision.toDouble()).toInt()
   for (i in 0 until max) {
     if (i % 2 == 0) {
-      pi += 4 / k
+      s += 4 / k
     } else {
-      pi -= 4 / k
+      s -= 4 / k
     }
     k += 2
   }
-  return pi
+  return s
 }
 
 fun main() {
