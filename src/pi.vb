@@ -2,17 +2,17 @@ Imports System
 
 Module Pi
   Function CalculatePi(ByVal precision As Integer) As Double
-    Dim pi As Double = 0, k As Double = 1
+    Dim s As Double = 0, k As Double = 1
     Dim max As Integer = 10 ^ precision, i As Integer
-      For i = 0 To max
+      For i = 0 To (max - 1)
         If (i MOD 2 = 0) Then
-          pi += 4 / k
+          s += 4 / k
         Else
-          pi -= 4 / k
+          s -= 4 / k
         End If
         k += 2
       Next 
-    Return pi
+    Return s
   End Function
 
   Sub Main()
