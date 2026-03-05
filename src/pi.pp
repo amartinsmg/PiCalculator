@@ -1,26 +1,26 @@
-PROGRAM Pi;
-USES Math;
-VAR ValPi: Real;
+program Pi;
+uses Math;
+var valPi: Real;
 
-FUNCTION CalculatePi(Precision: LongInt): Real;
-VAR s, k: Real;
-  i, Max: LongInt;
-BEGIN
+function CalculatePi(precision: LongInt): Real;
+var s, k: Real;
+  i, max: LongInt;
+begin
   s := 0;
   k := 1;
-  Max := Trunc(Power(10, Precision));
-  FOR i := 0 TO Max - 1 DO
-  BEGIN
-    IF (i MOD 2 = 0) THEN
+  max := Trunc(Power(10, precision));
+  for i := 0 to max - 1 do
+  begin
+    if (i mod 2 = 0) then
       s := s + 4 / k
-    ELSE
+    else
       s := s - 4 / k;
     k := k + 2;
-  END;
+  end;
   CalculatePi := s;
-END;
+end;
 
-BEGIN
-  ValPi := CalculatePi(9);
-  Writeln('Pi = ', ValPi:1:8);
-END.
+begin
+  valPi := CalculatePi(9);
+  WriteLn('Pi = ', valPi:1:8);
+end.
