@@ -1,4 +1,4 @@
-all: c cpp cs f90 go java kt pp rs vb
+all: c cpp cs f90 go java kt pp rs swift vb
 
 dir:
 	[ -d build ] || mkdir build
@@ -26,12 +26,15 @@ java: class
 
 kt: dir
 	kotlinc -include-runtime -d build/pi_kt.jar src/pi.kt 
-  
+
 pp: dir
 	fpc -Px86_64 -O2 -FE"build" -o"pi_pp" src/pi.pp && rm build/*.o
 
 rs: dir
-	rustc -o build/pi_rs -O src/pi.rs
-  
+	rustc -O -o build/pi_rs src/pi.rs
+
+swift: dir
+	swiftc -O -o build/pi_swift src/pi.swift
+
 vb: dir
 	vbc /out:build/pi_vb "src\\pi.vb"
