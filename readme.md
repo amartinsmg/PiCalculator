@@ -66,6 +66,7 @@ Results sorted by average runtime:
 | [Pascal](./src/pi.pp)            | Free Pascal Compiler 3.2.2                | 1.319s          |
 | [Rust](./src/pi.rs)              | Rust 1.61.0                               | 1.327s          |
 | [Visual Basic .NET](./src/pi.vb) | Microsoft Visual Basic Compiler 14.8.4161 | 1.448s          |
+| [Swift](./src/pi.swift)          | Swift 6.2.4                               | 1.542s          |
 | [C#](./src/pi.cs)                | Microsoft Visual C# Compiler 4.8.41       | 1.562s          |
 | [Java](./src/Pi.java)            | Java RE 18.0.1                            | 1.565s          |
 | [Kotlin](./src/pi.kt)            | Kotlin 1.5.0 (JRE 18.0.1)                 | 1.608s          |
@@ -96,7 +97,6 @@ As a result, optimization levels were not strictly standardized across all imple
 - Compiled languages cluster around ~1.2–1.6 seconds.
 - JIT-based runtimes perform competitively.
 - Interpreted languages show significant slowdown under large iteration counts.
-- Binary size varies drastically across ecosystems (from KB to several MB).
 
 This highlights differences in:
 
