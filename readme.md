@@ -72,7 +72,9 @@ Results sorted by average runtime:
 | [Kotlin](./src/pi.kt)            | Kotlin 1.5.0 (JRE 18.0.1)                 | 1.608s          |
 | [Julia](./src/pi.jl)             | Julia 1.7.2                               | 1.792s          |
 | [Javascript](./src/pi.js)        | Node 16.14.0                              | 2.218s          |
+| [LuaJIT](./src/pi.lua)           | LuaJIT 2.1.1772619647                     | 3.032s          |
 | [Dart](./src/pi.dart)            | Dart SDK 2.18.0                           | 5.553s          |
+| [Lua](./src/pi.lua)              | Lua 5.5.0                                 | 29.864s         |
 | [PHP](./src/pi.php)              | Zend Engine 4.1.7                         | 49.859s         |
 | [Python](./src/pi.py)            | CPython 3.10.5                            | 2m 22.004s      |
 | [Ruby](./src/pi.rb)              | Ruby 3.1.2                                | 2m 29.382s      |
@@ -87,6 +89,10 @@ Results sorted by average runtime:
 Compiler optimizations were applied selectively when they produced measurable performance improvements. For some languages, enabling optimization flags (such as `-O1`, `-O2`, or release builds) reduced execution time and were therefore kept. In other cases, optimizations produced no meaningful difference, so the programs were compiled using default settings.
 
 Because the languages in this project rely on different execution models — including ahead-of-time compilation (AOT), just-in-time compilation (JIT), and interpreted runtimes — optimization mechanisms vary significantly between ecosystems.
+
+In the case of Lua, performance between executing source code with Lua 5.5 and running precompiled bytecode was nearly identical in the tested scenario, so no specific preference was made between the two approaches.
+
+Executing the same implementation under LuaJIT resulted in an approximately 10× speedup compared to the standard Lua interpreter, demonstrating the impact of just-in-time compilation on tight numerical loops.
 
 As a result, optimization levels were not strictly standardized across all implementations. The goal was to reflect realistic compilation practices and obtain practical runtime comparisons rather than perform academically rigorous benchmarking.
 
