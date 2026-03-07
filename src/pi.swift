@@ -1,8 +1,7 @@
 import Foundation
 
 func calculatePi(precision: Int) -> Double {
-  var s = 0.0
-  var k = 1.0
+  var s = 0.0, k = 1.0
   let max = Int(pow(10.0, Double(precision)))
   for i in 0..<max {
     if i % 2 == 0 {
