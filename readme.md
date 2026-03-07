@@ -84,6 +84,101 @@ Results sorted by average runtime:
 
 ---
 
+## Performance Hierarchy
+
+Based on the measured runtimes, the languages roughly fall into tiers that reflect their execution model and runtime overhead.
+
+```
+AOT compiled languages
+C / C++ / Fortran / Go / Rust / Pascal
+~1.2 – 1.3s
+│
+Managed JIT runtimes
+Java / Kotlin / C# / VB.NET / Swift
+~1.4 – 1.6s
+│
+High-performance JIT scripting
+Julia / Javascript / LuaJIT
+~1.7 – 3.0s
+│
+Managed VM with heavier runtime
+Dart
+~5.5s
+│
+Lightweight bytecode interpreter
+Lua
+~30s
+│
+Heavy dynamic interpreter
+PHP
+~50s
+│
+Object-heavy interpreters
+Python / Ruby / Perl
+2–3 minutes
+│
+Scientific interpreter (loop-heavy workload)
+R
+~4 minutes
+│
+Matrix-oriented interpreter (loops inefficient)
+Octave
+~99 minutes
+```
+
+This hierarchy illustrates how execution models influence performance for CPU-bound workloads dominated by arithmetic loops.
+
+Compiled languages tend to converge toward similar runtimes because the generated machine code becomes the limiting factor. In contrast, interpreted runtimes accumulate overhead at each iteration, producing progressively larger performance gaps.
+
+---
+
+## Execution Model Differences
+
+The languages tested in this project follow different execution models, which strongly influence performance in CPU-bound workloads.
+
+### Ahead-of-Time (AOT) Compilation
+
+Languages such as C, C++, Fortran, Go, Rust and Pascal are compiled directly to native machine code before execution.
+
+This allows the compiler to perform aggressive optimizations such as:
+
+- instruction scheduling
+- register allocation
+- loop optimizations
+- inlining
+
+As a result, these languages tend to produce very similar runtimes when executing identical numerical algorithms.
+
+### Just-in-Time (JIT) Compilation
+
+Languages running on managed runtimes such as Java, LuaJIT, C#, and JavaScript use JIT compilation.
+
+The program is initially executed as bytecode, and frequently executed sections ("hot paths") are dynamically compiled to optimized machine code during runtime.
+
+This approach can achieve performance close to native code, though it introduces startup and runtime overhead.
+
+### Bytecode Interpretation
+
+Languages such as Lua and PHP execute bytecode through an interpreter loop.
+
+Each instruction must be decoded and dispatched at runtime, which adds overhead per operation compared to compiled or JIT-compiled code.
+
+However, lightweight interpreters like Lua still perform relatively well due to minimal runtime abstraction.
+
+### Dynamic Interpreters
+
+Languages like Python, Ruby, and Perl represent values as complex runtime objects and perform dynamic type checks during execution.
+
+While this provides high flexibility and expressiveness, it significantly increases the cost of simple arithmetic loops.
+
+### Vector-Oriented Scientific Runtimes
+
+Environments such as R and Octave are optimized for vectorized operations rather than scalar loops.
+
+When large computations are expressed as explicit loops, performance can degrade dramatically compared to compiled languages.
+
+---
+
 ## Optimization Notes
 
 Compiler optimizations were applied selectively when they produced measurable performance improvements. For some languages, enabling optimization flags (such as `-O1`, `-O2`, or release builds) reduced execution time and were therefore kept. In other cases, optimizations produced no meaningful difference, so the programs were compiled using default settings.
