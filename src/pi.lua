@@ -1,6 +1,5 @@
 local function calculatePi(precision)
-  local s = 0
-  local k = 1
+  local s, k = 0, 1
   local max = 10 ^ precision
   for i = 0, (max - 1) do
     if i % 2 == 0 then
